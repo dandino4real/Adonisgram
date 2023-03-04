@@ -1,0 +1,17 @@
+@layout('layouts/app')
+@set('title', 'Home Page')
+@section('content')
+  <main>
+    <div>
+      @if(auth.isAuthenticated)
+      <h1>Hi {{auth.user.name}}, Welcome to the Homepage!!!</h1>
+      <form action="/logout" method="post">
+        <button type="submit">Sign out</button>
+      </form>
+      @else
+      <h1>Hi, Welcome to the Homepage!!!</h1>
+        <a href="/login">Login</a>
+        @end
+    </div>
+  </main>
+@end

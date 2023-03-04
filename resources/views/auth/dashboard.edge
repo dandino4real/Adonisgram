@@ -1,0 +1,9 @@
+@layout('layouts/app')
+@set('title', 'Dashboard Page')
+@section('content')
+
+    <h1>Welcome to the Dashboard</h1>
+    {{auth.isAuthenticated}}
+    {{auth.user.email}}
+
+@end
